@@ -58,7 +58,7 @@ public class PersonServiceImpl implements PersonService {
   public String delete(Long id) {
 
     personRepository.deleteById(id);
-    return "Pesosa id" + id + "deletada";
+    return "Pesosa id " + id + " deletada";
   }
 
   private Person returnerPerson(Long id) {
