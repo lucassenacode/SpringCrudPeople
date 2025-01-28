@@ -56,8 +56,9 @@ public class PersonServiceImpl implements PersonService {
 
   @Override
   public String delete(Long id) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'delete'");
+
+    personRepository.deleteById(id);
+    return "Pesosa id" + id + "deletada";
   }
 
   private Person returnerPerson(Long id) {

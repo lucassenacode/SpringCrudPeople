@@ -33,4 +33,5 @@ public class PersonResponseDTO {
     this.empresaTrabalha = person.getEmpresaTrabalha();
     this.ultimaAtualizacao = person.getUltimaAtualizacao();
   }
+
 }
