@@ -37,15 +37,21 @@ public class PersonServiceImpl implements PersonService {
   }
 
   @Override
-  public PersonResponseDTO register(PersonRequestDTO registerPersonDTO) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'register'");
+  public PersonResponseDTO register(PersonRequestDTO PersonDTO) {
+
+    Person person = personMapper.toPerson(PersonDTO);
+
+    return personMapper.toPersonDTO(personRepository.save(person));
   }
 
   @Override
-  public PersonResponseDTO update(PersonRequestDTO registerPersonDTO, Long id) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'update'");
+  public PersonResponseDTO update(PersonRequestDTO PersonDTO, Long id) {
+
+    Person person = returnerPerson(id);
+
+    personMapper.updatePersonData(person, PersonDTO);
+
+    return personMapper.toPersonDTO(personRepository.save(person));
   }
 
   @Override

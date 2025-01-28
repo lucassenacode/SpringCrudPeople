@@ -36,4 +36,21 @@ public class PersonMapper {
 
     return peopleList.stream().map(PersonResponseDTO::new).collect(Collectors.toList());
   }
+
+  public void updatePersonData(Person person, PersonRequestDTO personRequestDTO){
+
+    person.setNumQuadrinho(personRequestDTO.getNumQuadrinho());
+    person.setNome(personRequestDTO.getNome());
+    person.setApelido(personRequestDTODTO.getApelido());
+    person.setAnoFormatura(personRequestDTODTO.getAnoFormatura());
+    person.setCursocurso(personRequestDTO.getCurso());
+        .cidade(personDTO.getCidade())
+        .estado(personDTO.getEstado())
+        .cep(personDTO.getCep())
+        .telefone(personDTO.getTelefone())
+        .email(personDTO.getEMail())
+        .empresaTrabalha(personDTO.getEmpresaTrabalha())
+        .ultimaAtualizacao(personDTO.getUltimaAtualizacao())
+
+  }
 }

@@ -11,9 +11,9 @@ public interface PersonService {
 
   List<PersonResponseDTO> findAll();
 
-  PersonResponseDTO register(PersonRequestDTO registerPersonDTO);
+  PersonResponseDTO register(PersonRequestDTO PersonDTO);
 
-  PersonResponseDTO update(PersonRequestDTO registerPersonDTO, Long id);
+  PersonResponseDTO update(PersonRequestDTO PersonDTO, Long id);
 
   String delete(Long id);
 }
