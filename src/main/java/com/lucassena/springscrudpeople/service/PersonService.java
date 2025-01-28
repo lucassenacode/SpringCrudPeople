@@ -13,7 +13,7 @@ public interface PersonService {
 
   PersonResponseDTO register(PersonRequestDTO PersonDTO);
 
-  PersonResponseDTO update(PersonRequestDTO PersonDTO, Long id);
+  PersonResponseDTO update(Long id, PersonRequestDTO PersonDTO);
 
   String delete(Long id);
 }

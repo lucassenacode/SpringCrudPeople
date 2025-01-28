@@ -45,7 +45,7 @@ public class PersonServiceImpl implements PersonService {
   }
 
   @Override
-  public PersonResponseDTO update(PersonRequestDTO PersonDTO, Long id) {
+  public PersonResponseDTO update(Long id, PersonRequestDTO PersonDTO) {
 
     Person person = returnerPerson(id);
 

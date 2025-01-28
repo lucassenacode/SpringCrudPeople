@@ -2,6 +2,9 @@ package com.lucassena.springscrudpeople.dto.response;
 
 import com.lucassena.springscrudpeople.entity.Person;
 
+import lombok.Getter;
+
+@Getter
 public class PersonResponseDTO {
 
   private Long id;
